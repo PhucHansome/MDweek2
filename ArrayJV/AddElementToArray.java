@@ -12,7 +12,7 @@ public class AddElementToArray {
         arr[2] = 6;
         arr[3] = 5;
         arr[4] = 4;
-        int n = 5;
+        int n = 6;
         System.out.println("Enter number");
         int x = scanner.nextInt();
 
