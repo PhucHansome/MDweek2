@@ -3,34 +3,72 @@ package week1.Java.MD2week1.ArrayJV;
 import java.util.Scanner;
 
 public class MergeArray {
+    public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        int[] a = null;
+        int[] b = null;
+        int[] c = null;
+        System.out.println("----Nhập mảng a----");
+        a = input(a);
+        System.out.println("----Nhập mảng b----");
+        b = input(b);
+        c = merge(a,b);
+        show(c);
+    }
 
-        int[] list1 = new int[4];
-        int[] list2 = new int[4];
+    public static int[] input(int[] arr) {
+        System.out.print("Nhập số phần tử của mảng: ");
+        int n = scanner.nextInt();
+        arr = new int[n];
+        System.out.print("Nhập các phần tử của mảng: \n");
+        for (int i = 0; i < n; i++) {
+            System.out.printf("a[%d] = ", i);
+            arr[i] = scanner.nextInt();
+        }
+        return arr;
+    }
 
-        System.out.println("Enter input value into array 1: ");
+    public static void sortASC(int[] arr) {
+        int temp = arr[0];
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    temp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = temp;
+                }
+            }
+        }
+    }
 
-        for (int i = 0; i < list1.length; i++) {
-            list1[i] = scanner.nextInt();
-        }
-        System.out.println("Enter input value into array 2: ");
-        for (int i = 0; i < list2.length; i++) {
-            list2[i] = scanner.nextInt();
-        }
-        int i = list1.length + list2.length;
-        int[] arr = new int[i];
-        int count = 0;
-        for (int j = 0 ;j < list1.length; j++) {
-            arr[j] = list1[j];
-            count++;
-        }
-        for (int j = 0; j < list2.length ; j++) {
-            arr[count++] = list1[j];
-        }
-        for (int j = 0; j < arr.length ; j++) {
-            System.out.print(arr[j] + " ");
-        }
+    public static int[] merge(int[] a, int[] b) {
+        int aIndex = a.length - 1;
+        int bIndex = b.length - 1;
+        int cIndex = a.length + b.length - 1;
+        int[] c = new int[cIndex + 1];
 
+        sortASC(a);
+        sortASC(b);
+        for (int i = cIndex; i > -1; i--) {
+            if (aIndex > -1 && bIndex > -1) {
+                if (a[aIndex] > b[bIndex]) {
+                    c[i] = a[aIndex--];
+                } else {
+                    c[i] = b[bIndex--];
+                }
+            } else if (bIndex == -1) {
+                c[i] = a[aIndex--];
+            } else if (aIndex == -1) {
+                c[i] = b[bIndex--];
+            }
+        }
+        return c;
+    }
+
+    public static void show(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
     }
 }

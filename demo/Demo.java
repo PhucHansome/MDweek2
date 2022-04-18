@@ -1,4 +1,4 @@
-package week1.Java.MD2week1.LoopJV.demo;
+package week1.Java.MD2week1.demo;
 
 public class Demo {
     public static void main(String[] args) {
