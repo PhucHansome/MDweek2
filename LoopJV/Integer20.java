@@ -6,9 +6,7 @@ public class Integer20 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Please Enter Numbers : ");
-        int numbers = scanner.nextInt();
-        for (int i = 0; i < numbers; i++) {
+        for (int i = 0; i < 72; i++) {
             if (isPrimeNumber(i)) {
                 System.out.print(i + " ");
 //                count++ ;
