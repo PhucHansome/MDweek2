@@ -21,6 +21,7 @@ public class AddElementToArray {
         System.out.println("Truoc khi Thêm:");
         for (int i = 0; i < n; i++)
             System.out.print(arr[i] + " ");
+
     }
     static int insert(int[] arr, int size, int n, int x, int index) {
         if (n >= size) {
