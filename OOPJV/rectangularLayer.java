@@ -17,7 +17,7 @@ public class rectangularLayer {
     public static class DrawRectangle {
         private double width;
         private double height;
-        public DrawRectangle() {}
+//        public DrawRectangle() {}
         public DrawRectangle(double width, double height) {
             this.width = width;
             this.height = height;

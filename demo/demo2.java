@@ -23,7 +23,7 @@ public class demo2 {
         int n = arr.length;
         int temp = 0;
         for (int i = 0; i < n - 1; i++) {
-            for (int j = 1 + i; j < n ; j++) {
+            for (int j = i + 1 ; j < n ; j++) {
                 if (arr[i] > arr[j]){
                     temp = arr[i];
                     arr[i] = arr[j];
