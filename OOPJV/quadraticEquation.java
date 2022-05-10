@@ -1,4 +1,4 @@
-package week1.Java.MD2week1.OOPJV;
+package MD22.Java.MD2week1.OOPJV;
 
 import java.util.Scanner;
 
@@ -43,9 +43,9 @@ class quadraticEquation2 {
 class dieukien {
     quadraticEquation2 pt = new quadraticEquation2();
 
-    public void nhappt() {
-        pt.insert();
-    }
+//    public void nhappt() {
+//        pt.insert();
+//    }
 
     public void kiemtra() {
         if (pt.a == 0) {
@@ -72,7 +72,7 @@ class dieukien {
 public class quadraticEquation {
     public static void main(String[] args) {
         dieukien dk = new dieukien();
-        dk.nhappt();
+        dk.pt.insert();
         dk.kiemtra();
     }
 }

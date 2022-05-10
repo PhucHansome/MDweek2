@@ -1,12 +1,10 @@
-package week1.Java.MD2week1.OOPJV;
+package MD22.Java.MD2week1.OOPJV;
 
-import java.awt.*;
 import java.util.Scanner;
 
 public class rectangularLayer {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Enter Width: ");
         double width = scanner.nextDouble();
         System.out.println("Enter height: ");

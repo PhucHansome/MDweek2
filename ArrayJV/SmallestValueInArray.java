@@ -1,4 +1,4 @@
-package week1.Java.MD2week1.ArrayJV;
+package MD22.Java.MD2week1.ArrayJV;
 
 public class SmallestValueInArray {
     public static void main(String[] args) {

@@ -1,6 +1,5 @@
-package week1.Java.MD2week1.numbertoletter;
+package MD22.Java.MD2week1.numbertoletter;
 
-import javax.security.sasl.SaslClient;
 import java.util.Scanner;
 
 public class numberToLetter {
@@ -156,14 +155,14 @@ public class numberToLetter {
                         if (thirdDigit == 0) {
                             System.out.println(first + " hundred " + third);
                         } else {
-                            System.out.println(first + " hundred and " + third);
+                            System.out.println(first + " hundred " + third);
                         }
                     } else {
                         if
                             (secondDigit == 1){
-                                System.out.println(first + " hundred and " + third);
+                                System.out.println(first + " hundred  " + third);
                             } else{
-                                System.out.println(first + " hundred and " + second + '-' + third);
+                                System.out.println(first + " hundred  " + second + '-' + third);
                             }
                         }
                         break;

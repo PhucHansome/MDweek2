@@ -1,4 +1,4 @@
-package week1.Java.MD2week1.AssMethod.AccesModifier;
+package MD22.Java.MD2week1.AssMethod.AccesModifier;
 
 public class Main {
     public static void main(String[] args) {

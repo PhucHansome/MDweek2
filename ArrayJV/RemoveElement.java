@@ -1,53 +1,58 @@
-package week1.Java.MD2week1.ArrayJV;
+package MD22.Java.MD2week1.ArrayJV;
 
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class RemoveElement {
     public static void main(String[] args) {
+        int size, element, number, index = 0, i;
         Scanner scanner = new Scanner(System.in);
-        int[] arr = new int[20];
-        arr[0] = 6;
-        arr[1] = 7;
-        arr[2] = 8;
-        arr[3] = 9;
-        arr[4] = 10;
-        arr[5] = 1;
-        arr[6] = 2;
-        arr[7] = 4;
-       int size = arr.length;
-       int n = 8;
 
-        System.out.println("Trước khi xóa: ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.print("Enter number");
-        int number = scanner.nextInt();
+        do {
+            System.out.print("Nhap so phan tu cua mang( nhap -1 de thoat): ");
+            size = Integer.parseInt(scanner.nextLine());
+            if (size > 1) {
+                int[] arr = new int[size];
+                for (int j = 0; j < size; j++) {
+                    System.out.println("Nhap phan tu thu " + (j + 1) + " : ");
+                    element = Integer.parseInt(scanner.nextLine());
+                    arr[j] = element;
+                }
+                System.out.println(Arrays.toString(arr));
 
-        n = deleteElement(arr, n, number);
+                System.out.print("nhap phan tu xoa: ");
+                number = Integer.parseInt(scanner.nextLine());
+                System.out.println(number);
 
-        System.out.println("Sau khi xóa: ");
-        for (int i = 0; i < n; i++) {
-            System.out.println(arr[i] + " ");
-        }
+                for (i = 0; i < size; i++) {
+                    if (arr[i] == number) {
+                        index = i;
+                        break;
+                    }
+                }
 
-    }
-    public static int deleteElement(int[] arr, int n, int key) {
-        int position = searchElement(arr, key);
-            if (position == - 1 ) {
-                System.out.println("Không tìm thấy : ");
+                System.out.println(i);
+
+                if (i == size) {
+                    System.out.println("Khong ton tai phan tu " + number + " trong mang!");
+                    System.out.println(Arrays.toString(arr));
+                }
+
+                int[] newarr = new int[size - 1];
+                for (int k = 0, l = 0; k < size; k++) {
+                    if (k == index) {
+                        continue;
+                    }
+                    newarr[l] = arr[k];
+                    l++;
+                }
+
+                System.out.println(Arrays.toString(newarr));
+            } else if (size < 1 && size != -1) {
+                System.out.println("Nhap so luong phan tu thich hop!");
             }
-            for (int i = position; i < n; i++) {
-                arr[i] = arr[i + 1];
-            }
-            return n - 1;
-    }
-    public static int searchElement(int[] arr, int x) {
-        for (int i = 0; i < arr.length; i++ ) {
-            if (arr[i] == x) {
-                return i;
-            }
-        }
-        return -1;
+        } while (size != -1);
     }
 }
+

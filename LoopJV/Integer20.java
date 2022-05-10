@@ -1,4 +1,4 @@
-package Java;
+package week1.Java.MD2week1.LoopJV;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package week1.Java.MD2week1.demo;
+package MD22.Java.MD2week1.demo;
 
 public class overLoadding {
     public static void main(String[] args) {

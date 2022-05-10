@@ -1,12 +1,11 @@
-package week1.Java.MD2week1.AssMethod.AccesModifier;
+package MD22.Java.MD2week1.AssMethod.AccesModifier;
+
 
 public class Cricle {
     private double radius = 1.0;
-    private String color = "red";
+    final String color = "red";
 
-    public Cricle(){
 
-    }
     public Cricle(double radius) {
         this.radius = radius;
     }

@@ -1,4 +1,4 @@
-package week1.Java.MD2week1.AssMethod.Staticmethod;
+package MD22.Java.MD2week1.AssMethod.Staticmethod;
 
 public class TestStaticMethod {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package week1.Java.MD2week1.AssMethod.StaticProperty;
+package MD22.Java.MD2week1.AssMethod.StaticProperty;
 
 public class Car {
     private String name;
@@ -11,16 +11,25 @@ public class Car {
         this.engine = engine;
         numberOfCars++;
     }
+
     public String getName() {
         return name;
     }
-     public void setName(String name) {
+
+    public void setName(String name) {
         this.name = name;
-     }
-      public String getEngine(){
+    }
+
+    public String getEngine() {
         return engine;
-      }
-      public void setEngine(String engine) {
+    }
+
+    public void setEngine(String engine) {
         this.engine = engine;
-      }
+    }
+
+    void display() {
+        System.out.println("Name car:" + name + "\nEngine: " + engine + "\nNumber : " + numberOfCars);
+    }
 }
+

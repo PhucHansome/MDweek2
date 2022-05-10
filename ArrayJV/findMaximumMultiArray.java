@@ -1,13 +1,26 @@
-package week1.Java.MD2week1.ArrayJV;
+package MD22.Java.MD2week1.ArrayJV;
+
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class findMaximumMultiArray {
     public static void main(String[] args) {
-        int[][] arr = {
-                {5, 7, 6, 7, 8, 8},
-                {5, 7, 9, 4, 20, 8},
-                {6, 3, 6, 7, 9, 2},
-                {7, 5, 6, 8, 5, 21}
-        };
+        Scanner scanner = new Scanner(System.in);
+        int x, y, element;
+        System.out.println("nhập vào số phần từ cột");
+        x = Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập vào số phần tử hàng");
+        y = Integer.parseInt(scanner.nextLine());
+        int[][] arr = new int[x][y];
+        System.out.println("nhập các phần tử của mang: ");
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++){
+                System.out.println("nhập vào phần từ "+ j);
+                element = Integer.parseInt(scanner.nextLine());
+                arr[i][j] = element;
+            }
+        }
+        System.out.println(Arrays.deepToString(arr));
         int max = arr[0][0];
 
         for (int i = 0; i < arr.length; i++) {
@@ -17,7 +30,7 @@ public class findMaximumMultiArray {
                 }
             }
         }
-        System.out.print(max);
+        System.out.print("giá trị lớn nhất là : " + max);
 
 
     }

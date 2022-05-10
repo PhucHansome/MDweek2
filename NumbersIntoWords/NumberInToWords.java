@@ -1,4 +1,4 @@
-package week1.Java.MD2week1.NumbersIntoWords;
+package MD22.Java.MD2week1.NumbersIntoWords;
 
 import java.util.Scanner;
 

@@ -1,20 +1,75 @@
-package week1.Java.MD2week1.demo;
+package MD22.Java.MD2week1.demo;
 
-public class Demo {
-    public static void main(String[] args) {
-        divFive();
+public abstract class Demo {
+    private String color = "white";
+    private boolean filled;
+    private java.util.Date dateCreated;
+
+    /**
+     * Construct a default geometric object
+     */
+    protected Demo() {
+        dateCreated = new java.util.Date();
     }
 
-    public static void divFive() {
-        System.out.println("Các phần tử chia hết cho 5 là: ");
-        int[] arr = {5, 8, 10, 5, 7, 8, 4, 20, 40, 80, 5, 4};
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 5 == 0) {
-                System.out.print(arr[i] + "\t");
-            }
-        }
+    /**
+     * Construct a geometric object with color and filled value
+     */
+    protected Demo(String color, boolean filled) {
+        dateCreated = new java.util.Date();
+        this.color = color;
+        this.filled = filled;
     }
+
+    /**
+     * Return color
+     */
+    public String getColor() {
+        return color;
+    }
+
+    /**
+     * Set a new color
+     */
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    /**
+     * Return filled. Since filled is boolean,
+     * the get method is named isFilled
+     */
+    public boolean isFilled() {
+        return filled;
+    }
+
+    /**
+     * Set a new filled
+     */
+    public void setFilled(boolean filled) {
+        this.filled = filled;
+    }
+
+    /**
+     * Get dateCreated
+     */
+    public java.util.Date getDateCreated() {
+        return dateCreated;
+    }
+
+    @Override
+    public String toString() {
+        return "created on " + dateCreated + "Äncolor: " + color +
+                " and filled: " + filled;
+    }
+
+    /**
+     * Abstract method getArea
+     */
+    public abstract double getArea();
+
+    /**
+     * Abstract method getPerimeter
+     */
+    public abstract double getPerimeter();
 }
-
-
-

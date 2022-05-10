@@ -1,52 +1,43 @@
-package week1.Java.MD2week1.demo;
+//package week1.Java.MD2week1.demo;
+//
+//import java.util.Scanner;
+//
+//class dieukien {
+//    demo2 pt = new demo2();
+//
+//    public void nhappt() {
+//        pt.insert();
+//    }
+//
+//    public void kiemtra() {
+//        if (pt.a == 0) {
+//            if (pt.b == 0) {
+//                System.out.println("Phương trình có vô số nghiệm");
+//            } else {
+////                System.out.println("phương trình có một nghiệp duy nhất" + pt.nghiemDuyNhat());
+//            }
+//        } else {
+//            if (pt.caculatorDelta() < 0) {
+//                System.out.println("phương trình vô nghiệm");
+//            } else {
+//                if (pt.caculatorDelta() == 0) {
+//                    System.out.println("phương trình có nghiệm kép" + pt.nghiemkep());
+//                } else {
+//                    System.out.println("phương trình có 2 nghiệm phân biệt: ");
+//                    pt.nghiemPhanBiet();
+//                }
+//            }
+//        }
+//    }
+//}
+//
+//public class demo3 {
+//    public static void main(String[] args) {
+//        dieukien dk = new dieukien();
+//        dk.nhappt();
+//        dk.kiemtra();
+//    }
+//}
 
-import javafx.scene.transform.Scale;
 
-import java.util.Scanner;
-
-public class demo3 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter width: ");
-        double width = scanner.nextDouble();
-        System.out.println("Enter height: ");
-        double height = scanner.nextDouble();
-        drawRectangle rectangle1 = new drawRectangle(width, height);
-        System.out.println(rectangle1.display());
-
-    }
-    public static class drawRectangle{
-        private double width;
-        private double height;
-        public drawRectangle(double width, double height){
-            this.width = width;
-            this.height = height;
-        }
-        public double getWidth(){
-            return width;
-        }
-        public double getHeight(){
-            return height;
-        }
-        public void setWidth(double width){
-            this.width = width;
-        }
-        public void setHeight(double height){
-            this.height = height;
-        }
-        public double getArea() {
-            return width * height;
-        }
-        public double getPerimeter() {
-            return (height + width) * 2;
-        }
-        public String display(){
-            return "Area Rectangle = "
-                    + getArea()
-                    + "Perimeter Rectangle"
-                    + getPerimeter();
-        }
-
-    }
-}
 
